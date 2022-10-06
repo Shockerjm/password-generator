@@ -1,0 +1,35 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Generate a <br /><span class="green-text">random password</span></h1>
+            <p class="tagline">Never use an insecure password again.</p>
+            <div class="options">
+                <button class="btn" onclick="generatePassword()">Generate passwords</button>
+                <input type="number" id="num-chars" type=text" placeholder="How many characters?"/>
+                <div class="toggles">
+                    <p>
+                        <input type="checkbox" id="numbers" class="checkbox"/>
+                        <label for="numbers" class="switch"></label>
+                        <span>Numbers</span>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="symbols" class="checkbox"/>
+                        <label for="symbols" class="switch"></label>
+                        <span>Symbols</span>
+                    </p>
+                </div>
+            </div>
+            <hr />
+            <div id="password-container">
+                <button id="p1-el" class="btn btn-password" onclick="copyPassword('p1-el')"></button><button id="p2-el" class="btn btn-password" onclick="copyPassword('p2-el')"></button>
+            </div>
+            <script src="index.js"></script>
+        </div>
+    </body>
+</html>
