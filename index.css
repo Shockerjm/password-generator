@@ -57,10 +57,12 @@ hr {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border: none;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 #num-chars {
     padding: 6px;
+    margin: 0 8px;
 }
 
 .toggles {
@@ -101,6 +103,27 @@ hr {
    display : none;
 }
 
+#copied { 
+    margin: 25px auto 0 auto;
+    border: 1px solid #55F991;
+    color: #55F991;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100px;
+    opacity: 0;
+    transition: .3s;
+}
+
+#copied.fade-in {
+    opacity: 1;
+    transition: .3s;
+}
+
+#copied.hide {
+    display: none;
+    visibility: hidden;
+}
+
 #password-container {
     align-items: center;
     justify-content: space-around;
@@ -113,4 +136,14 @@ hr {
     color: #55F991;
     margin: 35px auto;
     padding: 9px 40px;
+}
+
+.btn-password::selection {
+    color: none;
+    background: none;
+}
+
+btn-password::-moz-selection {
+    color: none;
+    background: none;
 }

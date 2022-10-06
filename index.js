@@ -8,6 +8,7 @@ const passwordContainer = document.querySelector("#password-container")
 const numEl = document.querySelector("#num-chars")
 const numToggle = document.querySelector("#numbers")
 const symToggle = document.querySelector("#symbols")
+const copied = document.querySelector("#copied")
 
 let isVisible = false;
 
@@ -46,6 +47,16 @@ function generatePassword() {
 }
 
 function copyPassword(id) {
+    copied.classList.remove("hide");
+    setTimeout(function () {
+        copied.classList.add("fade-in")
+        setTimeout(function () {
+            copied.classList.remove("fade-in")
+            setTimeout(function () {
+                copied.classList.add("hide")
+            }, 300)
+        }, 600)
+    })
     let el = document.getElementById(id)
     window.getSelection().selectAllChildren(el)
     document.execCommand("Copy")
