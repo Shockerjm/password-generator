@@ -136,6 +136,8 @@ hr {
     color: #55F991;
     margin: 35px auto;
     padding: 9px 40px;
+    width: 250px;
+    overflow-wrap: break-word;
 }
 
 .btn-password::selection {
